@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Read Online</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { margin: 0; height: 100vh; font-family: system-ui, sans-serif; }
+    #viewer { width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+  <div id="viewer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/epubjs/dist/epub.min.js"></script>
+  <script>
+    // 🔴 Replace this with YOUR release file URL
+    const bookUrl = "https://github.com/imtiazmarang/online-ebook/releases/download/v1.0/YourBook.epub";
+
+    const book = ePub(bookUrl);
+    const rendition = book.renderTo("viewer", {
+      width: "100%",
+      height: "100%"
+    });
+    rendition.display();
+  </script>
+</body>
+</html>
